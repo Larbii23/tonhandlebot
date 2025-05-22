@@ -17,7 +17,7 @@ bot.command('check', async (ctx) => {
   try {
     const res = await fetch(`https://tonapi.io/v2/dns/${handle}`);
     const data = await res.json();
-
+console.log(data);
     if (data?.is_available) {
       ctx.reply(`✅ *${handle}* est DISPONIBLE !\n👉 [Acheter sur GetGems](https://getgems.io/dns/${handle})`, {
         parse_mode: 'Markdown'
